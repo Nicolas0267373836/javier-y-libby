@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vista responsive · Abud &amp; Martínez</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..650&amp;family=Figtree:wght@400;500;600;700&amp;display=swap">
+  <style>
+    :root { color-scheme: light; --tinta: #0E1F38; --gris: #5E6778; --linea: #E2E9EF; --fondo: #EEF3F6; --verde: #1B6B3C; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--fondo); color: var(--tinta); font-family: "Figtree", system-ui, sans-serif; }
+    header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; max-width: 1480px; margin: 0 auto; padding: 32px 24px 16px; }
+    h1 { margin: 0; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 600; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); letter-spacing: -0.03em; }
+    header p { margin: 6px 0 0; color: var(--gris); max-width: 60ch; }
+    header a { color: var(--verde); font-weight: 700; }
+    .devices { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; max-width: 1480px; margin: 0 auto; padding: 8px 24px 48px; }
+    .dev { margin: 0; display: grid; gap: 10px; align-content: start; }
+    .dev--desk { grid-column: 1 / -1; }
+    .dev__screen { position: relative; overflow: hidden; border-radius: 18px; background: #fff; box-shadow: 0 30px 60px -30px rgba(14, 31, 56, .45), 0 0 0 1px var(--linea); }
+    .dev--mob .dev__screen { border-radius: 30px; box-shadow: 0 30px 60px -30px rgba(14, 31, 56, .45), 0 0 0 10px #0E1F38; margin: 10px; }
+    .dev iframe { position: absolute; left: 0; top: 0; border: 0; transform-origin: 0 0; background: #fff; }
+    figcaption { display: flex; justify-content: space-between; font-size: .9rem; font-weight: 600; color: var(--gris); }
+    figcaption b { color: var(--tinta); }
+    .row2 { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 28px; grid-column: 1 / -1; align-items: start; }
+    @media (max-width: 900px) { .row2 { grid-template-columns: minmax(0, 1fr); } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Vista responsive</h1>
+      <p>Las tres vistas cargan el mismo <code>index.html</code>. Desplázate dentro de cada marco para revisar escritorio (1440 px), tablet (768 px) y móvil (390 px).</p>
+    </div>
+    <a href="index.html" target="_blank" rel="noopener">Abrir el sitio en pestaña nueva ↗</a>
+  </header>
+  <main class="devices">
+    <figure class="dev dev--desk" data-w="1440" data-h="900">
+      <div class="dev__screen"><iframe src="index.html?embed" title="Vista de escritorio, 1440 px" loading="eager"></iframe></div>
+      <figcaption><b>Escritorio</b><span>1440 × 900</span></figcaption>
+    </figure>
+    <div class="row2">
+      <figure class="dev dev--tab" data-w="768" data-h="1024">
+        <div class="dev__screen"><iframe src="index.html?embed" title="Vista de tablet, 768 px" loading="lazy"></iframe></div>
+        <figcaption><b>Tablet</b><span>768 × 1024</span></figcaption>
+      </figure>
+      <figure class="dev dev--mob" data-w="390" data-h="844">
+        <div class="dev__screen"><iframe src="index.html?embed" title="Vista móvil, 390 px" loading="lazy"></iframe></div>
+        <figcaption><b>Móvil</b><span>390 × 844</span></figcaption>
+      </figure>
+    </div>
+  </main>
+  <script>
+    (() => {
+      const fit = () => {
+        document.querySelectorAll('.dev').forEach((dev) => {
+          const w = Number(dev.dataset.w);
+          const h = Number(dev.dataset.h);
+          const screen = dev.querySelector('.dev__screen');
+          const frame = dev.querySelector('iframe');
+          const maxW = dev.classList.contains('dev--mob') ? Math.min(screen.parentElement.clientWidth - 20, 390) : screen.parentElement.clientWidth;
+          const s = Math.min(1, maxW / w);
+          frame.style.width = `${w}px`;
+          frame.style.height = `${h}px`;
+          frame.style.transform = `scale(${s})`;
+          screen.style.width = `${Math.round(w * s)}px`;
+          screen.style.height = `${Math.round(h * s)}px`;
+        });
+      };
+      window.addEventListener('resize', fit);
+      fit();
+    })();
+  </script>
+</body>
+</html>
