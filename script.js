@@ -30,8 +30,8 @@
       nombre: 'Dr. Alejandro Abud', completo: 'Dr. Alejandro J. Abud Gómez', rol: 'Cirujano ortopeda',
       foto: 'images/dr-alejandro-abud.jpg', articulo: 'el',
       sedes: [
-        { lugar: 'Bávaro · Innovacare', detalle: 'Horario por confirmar', tbc: true },
-        { lugar: 'San Pedro de Macorís', detalle: 'Dirección y horario por confirmar', tbc: true }
+        { lugar: 'Bávaro · Innovacare', detalle: 'Lunes, miércoles y viernes · con cita' },
+        { lugar: 'San Pedro · Centro Hospitalario UCE', detalle: 'Martes y jueves · 8:30 a. m. – 3:00 p. m.' }
       ]
     },
     libby: {
@@ -52,7 +52,7 @@
   /* Días de consulta (1 = lunes … 5 = viernes). null = por confirmar: se permiten días laborables. */
   const HORARIOS = {
     libby: { bavaro: [1, 3, 5], spm: [2, 4] },
-    abud: { bavaro: null, spm: null }
+    abud: { bavaro: [1, 3, 5], spm: [2, 4] }
   };
 
   /* Proceso publicado en doctorabud.com (preparación, diagnóstico, consulta). */
