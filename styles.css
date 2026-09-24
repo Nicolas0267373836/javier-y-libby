@@ -856,6 +856,7 @@ a.topbar__item:hover { color: var(--blanco); }
   position: relative; display: grid; place-items: center; height: 158px; margin: 10px 10px 0; overflow: hidden;
   border-radius: 22px; background: linear-gradient(150deg, #F1F8F2 0%, #E6F1EB 55%, #DAEBE3 100%);
 }
+.t-card__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-5) var(--ease-out); }
 .t-card[data-cat="urologia"] .t-card__art { background: linear-gradient(150deg, #EFF6F8 0%, #E2EEF2 55%, #D5E6EC 100%); }
 .t-card__art::before {
   content: ""; position: absolute; inset: 0;
@@ -869,6 +870,8 @@ a.topbar__item:hover { color: var(--blanco); }
   transition: transform var(--dur-5) var(--ease-out);
 }
 .t-card[data-cat="urologia"] .t-card__art::after { border-color: rgba(18, 115, 105, .35); }
+.t-card:not(.t-card--cta) .t-card__art::before { z-index: 1; background: linear-gradient(180deg, rgba(10, 30, 36, .02), rgba(10, 30, 36, .36)); -webkit-mask-image: none; mask-image: none; }
+.t-card:not(.t-card--cta) .t-card__art::after { display: none; }
 .t-card__icon { position: relative; z-index: 1; width: 78px; height: 78px; color: var(--verde-700); stroke-width: 1.7; transition: transform var(--dur-4) var(--ease-spring); }
 .t-card[data-cat="urologia"] .t-card__icon { color: var(--teal-700); }
 .t-card__tag { position: absolute; z-index: 2; top: 12px; left: 12px; }
@@ -884,6 +887,7 @@ a.topbar__item:hover { color: var(--blanco); }
 @media (hover: hover) {
   .t-card:hover { transform: translateY(-6px); box-shadow: 0 34px 60px -30px rgba(0, 0, 0, .65); }
   .t-card:hover .t-card__icon { transform: translateY(-2px) rotate(-5deg) scale(1.04); }
+  .t-card:hover .t-card__image { transform: scale(1.035); }
   .t-card:hover .t-card__art::before { transform: scale(1.03); }
   .t-card:hover .t-card__art::after { transform: scale(1.08); }
   .t-card:hover .arrow-circle { transform: translateX(4px); background: var(--verde-600); color: var(--blanco); }
@@ -922,6 +926,7 @@ a.topbar__item:hover { color: var(--blanco); }
 .tm.is-swapping { animation: swapIn var(--dur-3) var(--ease-out); }
 .tm__side { position: sticky; top: 0; align-self: start; padding: 20px; display: grid; gap: 14px; }
 .tm__art { position: relative; display: grid; place-items: center; aspect-ratio: 1 / 1; overflow: hidden; border-radius: var(--r-xl); background: var(--grad-marca-deep); isolation: isolate; }
+.tm__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .tm__art.is-uro { background: linear-gradient(150deg, #2B7C83 0%, #1F5E70 40%, #1B3D66 100%); }
 .tm__art::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
@@ -930,6 +935,7 @@ a.topbar__item:hover { color: var(--blanco); }
   -webkit-mask-image: radial-gradient(circle, #000 20%, transparent 72%); mask-image: radial-gradient(circle, #000 20%, transparent 72%);
 }
 .tm__art::after { content: ""; position: absolute; z-index: -1; width: 62%; aspect-ratio: 1; border-radius: 50%; border: 1px dashed rgba(255, 255, 255, .3); box-shadow: 0 0 0 36px rgba(255, 255, 255, .04); }
+.tm__art:has(.tm__image)::before, .tm__art:has(.tm__image)::after { display: none; }
 .tm__art .ico-med { width: 46%; height: 46%; color: var(--blanco); stroke-width: 1.8; animation: artIn .8s var(--ease-out) both; }
 .tm__art .tag { position: absolute; left: 14px; top: 14px; background: rgba(255, 255, 255, .92); }
 .tm__doc { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: var(--r-md); background: var(--niebla); }

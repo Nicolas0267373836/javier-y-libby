@@ -66,7 +66,7 @@
      Fuentes: gráficos de Instagram entregados, bordado de la bata y doctorabud.com. Validar con cada especialista. */
   const TRATAMIENTOS = [
     {
-      id: 'artroscopia', cat: 'ortopedia', doctor: 'abud', icon: 'i-rodilla',
+      id: 'artroscopia', cat: 'ortopedia', doctor: 'abud', icon: 'i-rodilla', imagen: 'images/tratamiento-artroscopia.jpg',
       titulo: 'Artroscopia de rodilla y hombro', corto: 'Artroscopia',
       resumen: 'Diagnóstico y tratamiento de lesiones articulares a través de incisiones pequeñas.',
       que: 'La artroscopia permite ver el interior de la articulación con una cámara delgada y tratar la lesión con instrumentos de pocos milímetros. Es una técnica mínimamente invasiva que el Dr. Abud utiliza en rodilla y hombro.',
@@ -74,7 +74,7 @@
       incluye: ['Rodilla', 'Hombro', 'Técnica mínimamente invasiva']
     },
     {
-      id: 'columna', cat: 'ortopedia', doctor: 'abud', icon: 'i-columna',
+      id: 'columna', cat: 'ortopedia', doctor: 'abud', icon: 'i-columna', imagen: 'images/tratamiento-columna.jpg',
       titulo: 'Cirugía endoscópica de columna lumbar', corto: 'Endoscopia de columna',
       resumen: 'Técnica mínimamente invasiva para tratar problemas de la columna lumbar.',
       que: 'La endoscopia de columna es una técnica quirúrgica mínimamente invasiva que permite diagnosticar y tratar problemas de la columna vertebral a través de una incisión pequeña. Busca una intervención precisa y, según cada caso, una recuperación más rápida que la cirugía tradicional.',
@@ -82,7 +82,7 @@
       incluye: ['Descompresión endoscópica', 'Extracción de hernia discal', 'Tratamiento de estenosis espinal']
     },
     {
-      id: 'terapia-celular', cat: 'ortopedia', doctor: 'abud', icon: 'i-celulas',
+      id: 'terapia-celular', cat: 'ortopedia', doctor: 'abud', icon: 'i-celulas', imagen: 'images/tratamiento-terapia-celular.jpg',
       titulo: 'Terapia celular y medicina regenerativa', corto: 'Terapia celular',
       resumen: 'Plasma rico en plaquetas, exosomas y células madre para lesiones musculoesqueléticas.',
       que: 'La terapia celular es un área de la medicina regenerativa que utiliza componentes biológicos para apoyar la reparación de tejidos en algunas condiciones musculoesqueléticas. Su indicación se define de forma individual, después de la evaluación.',
@@ -90,7 +90,7 @@
       incluye: ['Plasma rico en plaquetas (PRP)', 'Exosomas', 'Células madre', 'Factores de crecimiento']
     },
     {
-      id: 'reemplazo-articular', cat: 'ortopedia', doctor: 'abud', icon: 'i-reemplazo',
+      id: 'reemplazo-articular', cat: 'ortopedia', doctor: 'abud', icon: 'i-reemplazo', imagen: 'images/tratamiento-reemplazo-articular.jpg',
       titulo: 'Reemplazo articular', corto: 'Reemplazo articular',
       resumen: 'Sustitución de una articulación dañada para aliviar el dolor y recuperar movilidad.',
       que: 'El reemplazo articular es un procedimiento quirúrgico que sustituye una articulación dañada por una prótesis. Se considera cuando el dolor y la limitación son importantes y otros tratamientos no han sido suficientes.',
@@ -98,7 +98,7 @@
       incluye: null, incluyeTbc: 'Articulaciones que trata: por confirmar'
     },
     {
-      id: 'traumatologia', cat: 'ortopedia', doctor: 'abud', icon: 'i-hueso',
+      id: 'traumatologia', cat: 'ortopedia', doctor: 'abud', icon: 'i-hueso', imagen: 'images/tratamiento-traumatologia.jpg',
       titulo: 'Ortopedia y traumatología', corto: 'Traumatología',
       resumen: 'Lesiones de huesos, músculos, ligamentos, articulaciones y tendones.',
       que: 'La ortopedia y traumatología se ocupa del diagnóstico, el tratamiento y la prevención de lesiones y afecciones del sistema musculoesquelético, con el objetivo de aliviar el dolor y mejorar la movilidad.',
@@ -106,7 +106,7 @@
       incluye: ['Cirugía de fracturas', 'Reparación de ligamentos y tendones', 'Cirugía de mano y muñeca']
     },
     {
-      id: 'ortopedia-infantil', cat: 'ortopedia', doctor: 'abud', icon: 'i-pie',
+      id: 'ortopedia-infantil', cat: 'ortopedia', doctor: 'abud', icon: 'i-pie', imagen: 'images/tratamiento-ortopedia-infantil.jpg',
       titulo: 'Ortopedia infantil', corto: 'Ortopedia infantil',
       resumen: 'Problemas musculoesqueléticos en niños y adolescentes, cuidando su crecimiento.',
       que: 'La ortopedia infantil se especializa en el diagnóstico, el tratamiento y la prevención de problemas musculoesqueléticos en niños y adolescentes, con atención al crecimiento y al desarrollo del esqueleto.',
@@ -114,7 +114,7 @@
       incluye: ['Ortesis', 'Cirugía correctiva']
     },
     {
-      id: 'urologia-femenina', cat: 'urologia', doctor: 'libby', icon: 'i-femenina',
+      id: 'urologia-femenina', cat: 'urologia', doctor: 'libby', icon: 'i-femenina', imagen: 'images/tratamiento-urologia-femenina.jpg',
       titulo: 'Urología femenina', corto: 'Urología femenina',
       resumen: 'Evaluación y tratamiento de condiciones urinarias en la mujer.',
       que: 'La urología femenina atiende condiciones del tracto urinario en la mujer. Es una de las áreas que destaca la Dra. Libby Martínez, con un enfoque de escucha y acompañamiento.',
@@ -122,7 +122,7 @@
       incluye: null, incluyeTbc: 'Procedimientos específicos por confirmar'
     },
     {
-      id: 'prostata', cat: 'urologia', doctor: 'libby', icon: 'i-prostata',
+      id: 'prostata', cat: 'urologia', doctor: 'libby', icon: 'i-prostata', imagen: 'images/tratamiento-prostata.jpg',
       titulo: 'Próstata', corto: 'Próstata',
       resumen: 'Salud prostática y cirugía mínimamente invasiva de próstata.',
       que: 'La consulta de próstata incluye la evaluación, el seguimiento y, cuando es necesario, el tratamiento quirúrgico. La Dra. Libby Martínez realiza cirugías mínimamente invasivas de próstata.',
@@ -130,7 +130,7 @@
       incluye: ['Evaluación prostática', 'Cirugía mínimamente invasiva de próstata']
     },
     {
-      id: 'rinones', cat: 'urologia', doctor: 'libby', icon: 'i-rinon',
+      id: 'rinones', cat: 'urologia', doctor: 'libby', icon: 'i-rinon', imagen: 'images/tratamiento-rinones.jpg',
       titulo: 'Riñones', corto: 'Riñones',
       resumen: 'Salud renal y cirugía mínimamente invasiva de riñón.',
       que: 'La urología trata los problemas quirúrgicos del riñón y de las vías urinarias. La Dra. Libby Martínez realiza cirugías mínimamente invasivas de riñón y promueve el cuidado de la salud renal.',
@@ -138,7 +138,7 @@
       incluye: ['Cirugía mínimamente invasiva de riñón', 'Salud renal']
     },
     {
-      id: 'calculos', cat: 'urologia', doctor: 'libby', icon: 'i-calculos',
+      id: 'calculos', cat: 'urologia', doctor: 'libby', icon: 'i-calculos', imagen: 'images/tratamiento-calculos-urinarios.jpg',
       titulo: 'Cálculos de vías urinarias', corto: 'Cálculos urinarios',
       resumen: 'Diagnóstico y tratamiento de piedras en el riñón y las vías urinarias.',
       que: 'Los cálculos (piedras) se forman en el riñón y pueden desplazarse por las vías urinarias, causando dolor intenso u obstrucción. El tratamiento depende de su tamaño y ubicación, y puede incluir opciones mínimamente invasivas.',
@@ -146,7 +146,7 @@
       incluye: ['Cirugía mínimamente invasiva de cálculos']
     },
     {
-      id: 'chequeo-urologico', cat: 'urologia', doctor: 'libby', icon: 'i-chequeo',
+      id: 'chequeo-urologico', cat: 'urologia', doctor: 'libby', icon: 'i-chequeo', imagen: 'images/tratamiento-chequeo-urologico.png',
       titulo: 'Urología general y chequeos preventivos', corto: 'Chequeos preventivos',
       resumen: 'Chequeos urológicos y prevención para hombres y mujeres.',
       que: 'La consulta de urología general evalúa la salud del sistema urinario y, en los hombres, del aparato reproductor. Los chequeos periódicos ayudan a detectar a tiempo problemas urinarios, renales y prostáticos.',
@@ -432,8 +432,8 @@
         <article class="tm${swap ? ' is-swapping' : ''}">
           <aside class="tm__side">
             <div class="tm__art${uro ? ' is-uro' : ''}">
+              <img class="tm__image" src="${t.imagen}" alt="" width="1600" height="900" loading="lazy" decoding="async">
               <span class="tag${uro ? ' tag--uro' : ''}">${CAT_LABEL[t.cat]}</span>
-              ${icon(t.icon, 'ico-med')}
             </div>
             <div class="tm__doc">
               <img src="${doc.foto}" alt="" width="864" height="1080">
@@ -529,8 +529,8 @@
       const doc = DOCTORES[t.doctor];
       return `<a class="t-card reveal" style="--i:${i % 3}" href="#tratamiento-${t.id}" data-id="${t.id}" data-cat="${t.cat}" aria-haspopup="dialog">
         <div class="t-card__art">
+          <img class="t-card__image" src="${t.imagen}" alt="" width="1600" height="900" loading="lazy" decoding="async">
           <span class="tag t-card__tag${t.cat === 'urologia' ? ' tag--uro' : ''}">${CAT_LABEL[t.cat]}</span>
-          ${icon(t.icon, 'ico-med t-card__icon')}
         </div>
         <div class="t-card__body">
           <h3 class="t-card__title">${esc(t.titulo)}</h3>
